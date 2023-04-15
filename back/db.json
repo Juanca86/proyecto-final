@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "email": "nombre@nombre.com",
+      "password": "$2a$10$n8TV12cEZwvoN1jdRxy3b.mfEVnokQr0qfoDqlKn.XYBRubAZBQUm",
+      "username": "nombre",
+      "id": 1
+    },
+    {
+      "email": "user@user.com",
+      "password": "$2a$10$4HGnKhH4klcHYWYVVcsDo.Qb0FPy375qoKFRcJeofHiSSOg9NGpMy",
+      "username": "user",
+      "id": 2
+    },
+    {
+      "email": "name@name.com",
+      "password": "$2a$10$u/64vFDLh4DbY3SCOYZmp.dpho9SpCQ07ri0FI0kAdvBldcutOB8u",
+      "username": "name",
+      "id": 3
+    },
+    {
+      "email": "vic@vic.com",
+      "password": "$2a$10$uMrzz22Z9A.mCQOlEusMt.oyp9h0G70WUIra.bL3mr1ihqmZYZO3K",
+      "username": "vic",
+      "id": 4
+    },
+    {
+      "email": "disc@disc.com",
+      "password": "$2a$10$fmjydQt9WqS17UPvLLCcHezHyp5D/IPLDR6hL8vf.Oi34VWLyehdi",
+      "username": "disc",
+      "id": 5
+    }
+  ],
+  "login":{
+    
+  }
+}
