@@ -9,12 +9,12 @@ const Profile = () => {
     <Container>
         <Form>
             <FormGroup>
-                <label>Nombre: </label>
-                {user.firstName}
+                <label>Usuario: </label>
+                {user.username}
             </FormGroup>
             <FormGroup>
-                <label>Apellidos: </label>
-                {user.lastName}
+                <label>Id: </label>
+                {user.id}
             </FormGroup>
             <FormGroup>
                 <label>Email: </label>

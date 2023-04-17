@@ -23,7 +23,7 @@ const LoginComponent = () => {
     <Container>
         <Form>
             <FormGroup>
-                <FormLabel>Nombre de Usuario</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='username' type='username'></input>
             </FormGroup>
             <FormGroup>
