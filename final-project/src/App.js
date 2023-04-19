@@ -9,6 +9,9 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import { useSelector } from 'react-redux';
 import Register from './pages/Register';
+import Crud from './pages/Crud';
+import Gallery from './pages/Gallery';
+import MotoComponent from './components/Moto/MotoComponent';
 
 function App() {
     const {user} = useSelector((state)=> state.AuthReducer)
@@ -20,9 +23,12 @@ function App() {
         <Route exact path='/characters' element={<CharactersComponent/>}></Route>
         <Route exact path='/locations' element={<LocationsComponent/>}></Route>
         <Route exact path='/episodes' element={<EpisodesComponent/>}></Route>
+        <Route exact path='/gallery' element={<Gallery/>}></Route>
+        <Route exact path='/gallery/:id' element={<MotoComponent/>}></Route>
         <Route exact path='/login' element={<Login/>}></Route>
         <Route exact path='/register' element={<Register/>}></Route>
         <Route exact path='/profile' element={user && user.id? <Profile/>: <Navigate to='/login' replace></Navigate>}></Route>
+        <Route exact path='/crud' element={<Crud/>}></Route>
       </Routes>
     </div>
   );

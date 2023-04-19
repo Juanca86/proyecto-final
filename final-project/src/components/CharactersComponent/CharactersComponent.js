@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import { getCharacters } from "../../store/characters/action";
 import { Card, Container } from "react-bootstrap";
-import { computeHeadingLevel } from "@testing-library/react";
+
 
 const CharactersComponent = () => {
   const dispatch = useDispatch();
@@ -31,8 +30,6 @@ const CharactersComponent = () => {
   );
 };
 
-CharactersComponent.propTypes = {};
 
-CharactersComponent.defaultProps = {};
 
 export default CharactersComponent;

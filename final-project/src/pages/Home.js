@@ -1,5 +1,5 @@
 import { Container, Image } from "react-bootstrap";
-import backgroundImage from "../assets/images/1_6344.jpg";
+import backgroundImage from "../assets/images/Moteros.jpg";
 import { useSelector } from "react-redux";
 
 export default function Home(){

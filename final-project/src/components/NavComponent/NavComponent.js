@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,16 +18,18 @@ const NavComponent = () => {
     <Navbar bg='dark' variant='dark'>
       <Container>
         <Navbar.Brand>
-          Rick y Morty
+          Motos
         </Navbar.Brand>
         <Nav>
           <Link className='nav-link' to='/'>Home</Link>
           {user && user.id? <Link className='nav-link' to='/characters'>Personajes</Link> : '' } 
           {user && user.id?  <Link className='nav-link' to='/locations'>Lugares</Link>: ''}  
           {user && user.id? <Link className='nav-link' to='/episodes'>Episodios</Link>: ''} 
+          {user && user.id? <Link className='nav-link' to='/gallery'>Galeria</Link>: ''} 
           {user && user.id? '': <Link className='nav-link' to='/login'>Login</Link> } 
           {user && user.id? '': <Link className='nav-link' to='/register'>Registrar</Link> } 
           {user && user.id? <Link className='nav-link' to='/profile'>Perfil</Link> :'' }  
+          {user && user.id? <Link className='nav-link' to='/crud'>Registrar Producto</Link> :'' }  
           {user && user.id? <Link onClick={closeSession} className='nav-link'>Logout</Link>: ''}
         </Nav>
       </Container>
