@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "reactstrap": "^9.1.9",
+    "sweetalert2": "^11.7.3"
+  }
+}
