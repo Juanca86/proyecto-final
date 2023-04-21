@@ -6,6 +6,9 @@ import {
   GET_MOTO,
   GET_MOTO_OK,
   GET_MOTO_FAIL,
+  EDIT_MOTO,
+  EDIT_MOTO_OK,
+  EDIT_MOTO_FAIL,
   // DELETE_MOTOS,
   // DELETE_MOTOS_OK,
   // DELETE_MOTOS_FAIL,
@@ -44,9 +47,10 @@ export function getMotos() {
   };
 }
 
-export function actionGetMoto() {
+export function actionGetMoto(id) {
   return {
     type: GET_MOTO,
+    payload: id
   };
 }
 export function actionGetMotoOk(motoId) {
@@ -75,10 +79,42 @@ export function getMoto(motoId) {
     }
   };
 }
+export function actionEditMoto() {
+  return {
+    type: EDIT_MOTO,
+    
+  };
+}
+export function actionEditMotoOk(motoId) {
+  return {
+    type: EDIT_MOTO_OK,
+    payload: motoId,
+  };
+}
+export function actionEditMotoFail(error) {
+  return {
+    type: EDIT_MOTO_FAIL,
+    payload: error,
+  };
+}
 
-// export function actionDeleteMotos() {
+export function EditMoto(id, comment  ) {
+  return async (dispatch) => {
+    dispatch(actionEditMoto());
+    try {
+      const response = await axios.patch(`http://localhost:3000/motos/${id}`, {comentario: comment } );
+      dispatch(actionEditMotoOk(response.data));
+      // console.log(motoId, 'motoid');
+      // console.log(response.data);
+    } catch (error) {
+      dispatch(actionEditMotoFail(error));
+    }
+  };
+}
+
+// export function actionDeleteMotos(id) {
 //   return {
-//     type: DELETE_MOTOS,
+//     type: DELETE_MOTOS, payload: id,
 //   };
 // }
 // export function actionDeleteMotosOk(motos) {
@@ -94,16 +130,23 @@ export function getMoto(motoId) {
 //   };
 // }
 
-// export function DeleteMotos(motos) {
+// export function DeleteMotos(id) {
 //   return async (dispatch) => {
-//     dispatch(actionDeleteMotos(motos));
+//     dispatch(actionDeleteMotos(id));
 //     try {
-//       const response = await axios.delete("http://localhost:3000/motos", motos);
+//       const response = await axios.delete("http://localhost:3000/motos").then(()=> {
+//         dispatch(actionDeleteMotosOk(id))
+//       })
 //       // console.log(response);
-//       dispatch(actionDeleteMotosOk(response.data));
+//       // dispatch(actionDeleteMotosOk(response.data));
 //       // console.log(response.data);
 //     } catch (error) {
 //       dispatch(actionDeleteMotosFail(error));
 //     }
 //   };
 // }
+
+
+export const API = axios.create({
+  baseURL: "http://localhost:3000"
+})
