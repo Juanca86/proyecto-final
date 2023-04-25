@@ -22,6 +22,7 @@ const Profile = () => {
             </FormGroup>
             <Image src={user.image}/>
         </Form>
+        
     </Container>
   )
 }

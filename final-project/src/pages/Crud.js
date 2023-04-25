@@ -98,6 +98,7 @@ const Crud = () => {
         <button className="btn btn-success">Guardar</button>
       </Form>
       <div>{console.log(data.motos, "data")}</div>
+      
     </Container>
   );
 };

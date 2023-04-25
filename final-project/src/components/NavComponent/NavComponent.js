@@ -22,9 +22,7 @@ const NavComponent = () => {
         </Navbar.Brand>
         <Nav>
           <Link className='nav-link' to='/'>Home</Link>
-          {user && user.id? <Link className='nav-link' to='/characters'>Personajes</Link> : '' } 
-          {user && user.id?  <Link className='nav-link' to='/locations'>Lugares</Link>: ''}  
-          {user && user.id? <Link className='nav-link' to='/episodes'>Episodios</Link>: ''} 
+
           {user && user.id? <Link className='nav-link' to='/gallery'>Galeria</Link>: ''} 
           {user && user.id? '': <Link className='nav-link' to='/login'>Login</Link> } 
           {user && user.id? '': <Link className='nav-link' to='/register'>Registrar</Link> } 
