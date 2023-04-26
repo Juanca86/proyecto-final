@@ -2,9 +2,26 @@
   text-align: center;
 }
 
-img {
-  width: 100px;
-  /* background-image: url(../src/assets/images/1_6344.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat; */
+.moto-gallery {
+  width: 200px;
 }
+
+.moto-home {
+  display: flex;
+  margin:auto;
+  max-width: 100%;
+  width: 450px;
+  height: 796px;
+}
+.moto {
+  display: flex;
+  margin:auto;
+  max-width: 100%;
+  width: 450px;
+  height: auto;
+}
+
+
+
+
+

@@ -1,7 +1,5 @@
 import { Container, Image } from "react-bootstrap";
-// import backgroundImage from "../assets/images/Moteros.jpg";
 import { useSelector } from "react-redux";
-// import "../assets/images"
 import moto from "../assets/images/1.jpg"
 import moto1 from "../assets/images/2.jpg"
 import moto2 from "../assets/images/3.jpg"
@@ -111,11 +109,13 @@ class Home extends Component {
             onExited={this.onExited}
             
     >
-            <div 
+            {/* <div 
             className="custom-tag"
-            style={{ backgroundImage: `url(${item.src})` }} >
-            </div>
-          
+            style={{  backgroundImage: `url(${item.src})` }} >
+            </div> */}
+            <img className="moto-home" src={item.src} alt={item.altText} style={{ width: "100%"}}/>
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        
           </CarouselItem>
         );
       });
@@ -144,7 +144,7 @@ class Home extends Component {
             <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
           </Carousel>
-        </div>
+          </div>
       );
     }
   }

@@ -34,23 +34,19 @@ const Gallery = () => {
   useEffect(() => {
     dispatch(getMotos());
   }, []);
-  //   useEffect(()=> {
-  //     dispatch(DeleteMotos())
-  //   } ,[])
+  
 
   return (
     <Container>
-      {console.log(motos, "motos")}
+      
       {motos.map((moto) => {
-        {
-          /* console.log(moto.id) */
-        }
+        
         return (
           <Card className="px-4 py-2 mb-3">
             <Link to={`/gallery/${moto.id}`}>
               <Card.Title key={moto.id}>{moto.model}</Card.Title>
             </Link>
-            <img src={moto.image} alt={moto.model} />
+            <img className="moto-gallery" src={moto.image} alt={moto.model} />
 
             <Button
               bg="dark"
